@@ -4,7 +4,7 @@ include_once __DIR__ . "/MaterialeBibliotecario.php";
 
 class Dvd extends MaterialeBibliotecario{
     protected $registra;
-    static public $contatore=0;
+    static protected $contatore=0;
 
     public function __construct($titolo, $registra, $annoPubblicazione ){
       parent::__construct($titolo,$annoPubblicazione);

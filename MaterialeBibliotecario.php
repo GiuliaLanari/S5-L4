@@ -3,7 +3,7 @@
 include_once __DIR__ . "/Prestito.php";
 
 abstract class MaterialeBibliotecario implements Prestito{
-    static public $contatore =0;
+    static protected $contatore =0;
     protected $annoPubblicazione;
     protected $titolo;
 
@@ -16,13 +16,13 @@ abstract class MaterialeBibliotecario implements Prestito{
     }
 
 
-    function presta(){
+    public function presta(){
         self::$contatore--;
         static::$contatore--;
 
     }
 
-    function restituisci(){
+    public function restituisci(){
         self::$contatore++;
         static::$contatore++;
     }
